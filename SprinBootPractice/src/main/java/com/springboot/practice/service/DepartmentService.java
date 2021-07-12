@@ -3,6 +3,7 @@ package com.springboot.practice.service;
 import java.util.List;
 
 import com.springboot.practice.entity.Department;
+import com.springboot.practice.error.DepartmentNotFountException;
 
 public interface DepartmentService {
 
@@ -10,7 +11,7 @@ public interface DepartmentService {
 
 	List<Department> getAllDepartments();
 
-	Department getDepartmentById(Long departmentId);
+	Department getDepartmentById(Long departmentId) throws DepartmentNotFountException;
 
 	Department getDepartmentByName(String departmentName);
 
